@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<title>Halloween</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/nightSky.css" />
+
+	<!-- libs -->
+	<script type="text/javascript" src="libs/jquery-3.2.1.min.js"></script>
+
+	<!-- js -->
+	<script type="text/javascript" src="js/handler.js"></script>
+	<script type="text/javascript" src="js/nightSky.js"></script>
+</head>
+<body>
+
+	<section id="title">
+
+		<h1 id="heading">Halloween</h1>
+
+		<svg id="" width="inherit" height="500px" viewBox="0 0 1349 500">
+		
+			<g>
+				
+				<defs>
+					
+					<title>pumpkin</title>
+
+					<polyline id="pumpkinEye" points="15,5 30,25 0,25 16,5" fill="#999" stroke="#000" stroke-width="2px" stroke-dasharray="81" />
+
+					<g id="pumpkin">
+						
+						<ellipse cx="70" cy="70" rx="60px" ry="50px" fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="346">
+							<animate
+								id="pumpkinBody"
+								attributeName="stroke-dashoffset"
+								from="346"
+								to="0"
+								begin="0s"
+								dur="2s"
+								repeatCount="1"
+								calcMode="linear"
+								fill="freeze"
+							/>
+						</ellipse>
+
+						<g>
+						    <use xlink:href="#pumpkinEye" x="35px" y="30px" />
+						    <use xlink:href="#pumpkinEye" x="75px" y="30px" />
+
+						    <animate
+								attributeName="stroke-dashoffset"
+								from="81"
+								to="0"
+								begin="pumpkinBody.begin"
+								dur="3s"
+								repeatCount="1"
+								calcMode="linear"
+								fill="freeze"
+							/>
+						</g>
+
+						<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="315" d="
+							M80,20 v-15 h-20 v15
+							m-29,55 a3,1 1,1,0 80,0 v10 a2,1 1,1,1 -80,0 v-10
+							m20,11 v10 h10 v-9
+							m31,0 v10 h-10 v-9
+						">
+						<animate
+							attributeName="stroke-dashoffset"
+							from="315"
+							to="0"
+							begin="pumpkinBody.begin"
+							dur="4s"
+							repeatCount="1"
+							calcMode="linear"
+							fill="freeze"
+						/>
+						</path>
+
+					</g>
+
+				</defs>
+
+				<use xlink:href="#pumpkin" x="20px" y="350px" />
+
+			</g>
+
+			<g>
+				
+				<defs>
+					
+					<title>ghost</title>
+
+					<ellipse id="ghostEye" rx="8px" ry="10px" fill="#999" stroke="#000" stroke-width="2px" stroke-dasharray="57" />
+
+					<g id="ghost">
+
+						<g>
+							<use xlink:href="#ghostEye" x="79px" y="25px" />
+							<use xlink:href="#ghostEye" x="101px" y="25px" />
+
+							<animate
+								id="ghostEyes"
+								attributeName="stroke-dashoffset"
+								from="57"
+								to="0"
+								begin="0s"
+								dur="4s"
+								repeatCount="1"
+								calcMode="linear"
+								fill="freeze"
+							/>
+						</g>
+
+						<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="782" d="
+							M55,45 a1,1.2 1,1,1, 70,0 a5,1 1,1,1, 50,0 l-20,5 l10,15
+							a5,1 1,1,0 -20,0 l-5,60 l-10,-20 l-30,80 l-10,-40 l-10,20
+							l-20,-60 l-10,20 l-15,-60 a5,1 1,1,0 -20,0 v-1 l10,-15 l-20,-5 a5,1 1,1,1, 50,0
+							m10,-5 a3,1 1,1,0 50,0
+						">
+							<animate
+								id="ghostBody"
+								attributeName="stroke-dashoffset"
+								from="782"
+								to="0"
+								begin="ghostEyes.begin"
+								dur="4s"
+								repeatCount="1"
+								calcMode="linear"
+								fill="freeze"
+							/>
+						</path>
+
+					</g>
+
+				</defs>
+
+				<use xlink:href="#ghost" x="1150px" y="300px" />
+
+			</g>
+
+			<g>
+				
+				<defs>
+					
+					<title>witch</title>
+
+					<circle id="witchEye" r="4px" fill="#999" stroke="#000" stroke-width="2px" stroke-dasharray="25" />
+
+					<g id="witch">
+						
+						<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="970" d="
+							M45,50 a2,1 1,1,0 70,0 h-10
+							m-10,0 a3,1 1,1,1 -30,0
+							m40,0 l-5,-30 a2,1 1,1,0 -60,0 
+							l20,10 l-5,20 h-11
+							m10,10 a1,1 1,1,0 55,0
+							m-22,19 a2,1 1,1,1 -10,0
+							m-9,5.5 l-15,40 h10 l10,10 l-10,15 a5,1 1,1,0 40,0
+							l10,-30 l-45,-35 m15,3 l15,10
+							l40,-25 l8,8 l-40,25 l-6,4
+							m-30,23 l-30,25 v10 l-20,10 l-3,-5 l15,-8 l-3,-5 l-15,8 l-3,-5
+							l15,-8 l-3,-5 l-15,8 l-3,-5 l20,-10 l10,5 l30,-22
+						">
+						<!-- leg: m10,27 v10 a5,1 1,1,0 25,0 l-15,-9 -->
+							<animate
+								id="witchBody"
+								attributeName="stroke-dashoffset"
+								from="970"
+								to="0"
+								begin="0s"
+								dur="10s"
+								repeatCount="1"
+								calcMode="linear"
+								fill="freeze"
+							/>
+						</path>
+
+						<g>
+							<use xlink:href="#witchEye" x="73px" y="72px" />
+							<use xlink:href="#witchEye" x="91px" y="71px" />
+
+							<animate
+								id="witchEyes"
+								attributeName="stroke-dashoffset"
+								from="25"
+								to="0"
+								begin="witchBody.begin"
+								dur="2s"
+								repeatCount="1"
+								calcMode="linear"
+								fill="freeze"
+							/>
+						</g>
+
+						<animateMotion 
+							xlink:href="#witch"
+							path="
+								M0,0 a1.5,1 1,1,1 300,0 a1.5,1 1,1,0 300,0 a1.5,1 1,1,1 300,0 a1.5,1 1,1,0 300,0
+								"
+							begin="witchEyes.end + 1s"
+							dur="7s"
+							rorate="auto"
+							repeatCount="indefinite"
+							calcMode="linear"
+						/>
+
+					</g>
+
+				</defs>
+
+				<use xlink:href="#witch" x="50px" y="110px" />
+				<use xlink:href="#witch" x="0px" y="110px" transform="translate(1300), scale(-1, 1)" />
+
+			</g>
+
+		</svg>
+
+	</section>
+
+	<section id="block2">
+		
+		<article class="description">
+
+			<p>
+				Хеллоуїн – це одне з найдавніших свят на нашій планеті. Свято Хеллоуїн святкується в ніч з 31 жовтня на 1 листопада, що бере свої початки з давніх давен і святкується по сей день.
+			</p><br />
+
+			<h3>Історія Хеллоуїна</h3>
+
+			<p>
+				Звідки пішла традиція вбиратися в цей день в костюми і ходити по домівках сусідів, пропонуючи "гаманець або життя"? Насправді, кілька століть тому, це було не просто свято, а обов'язковий щорічний обряд зі своїми суворими правилами. Історія Хеллоуїна бере початок ще в епоху зародження Англії, Ірландії та Франції. У ті часи рік не був розділений на 12 місяців, а складався всього з двох частин – зими і літа. Так як населення країн було переважно язичницьким, то існувала легенда про те, що Бог Сонця кожної зими був у полоні у Самхейна, що, у свою чергу, був владикою темряви. Тому, саме 31 жовтня кельти готували підношення темному лицареві, щоб задобрити його, щоб він повернув сонце назад.
+			</p><br />
+			<p>
+				Також Хеллоуїн, дата якого випадала на кінець сезону збору врожаю, був символом переходу до нового життя. Взимку все живе гинуло і опинялося під снігом, але потім знову відроджувалося. До того ж вважалося, що Самхейн жив у білій пустелі, де панував спокій і умиротворення. Після важкого робочого часу, для кельтів зима була періодом, коли можна відпочити від важкої роботи і присвятити час сім'ї.
+			</p><br />
+			<p>
+				Ще одна легенда, пов'язана з володарем темряви, свідчить, що саме в цю ніч він відкриває ворота в інші світи і дозволяє побачити минуле і майбутнє. Точно так само, як літо змінюється взимку в цей день, кельти сподівалися, що і життя змінить свій хід і принесе їм удачу в наступному році.
+			</p>
+			
+		</article>
+		
+	</section>
+
+	<section id="block3">
+		
+		<svg id="" width="inherit" height="400px" viewBox="0 0 1349 400">
+			
+			<g>
+
+				<defs>
+					
+					<title>house</title>
+
+					<path id="smallHouseWindow" fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="201" d="
+						M5,40 a1,2.5 1 0,1 30,0 h-30	
+						m15,0 v-37 m10,10 h-20 m-3,7 h27
+					">
+						<animate
+							attributeName="stroke-dashoffset"
+							from="201"
+							to="0"
+							begin="houseAnim.begin"
+							dur="4s"
+							repeatCount="1"
+							calcMode="linear"
+							fill="freeze"
+						/>
+					</path>
+
+					<path id="bigHouseWindow" fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="223" d="
+						M5,50 a1,3 1 0,1 30,0 h-30	
+						m15,0 v-45 m10,12 h-20 m-3,10 h27
+					">
+						<animate
+							attributeName="stroke-dashoffset"
+							from="223"
+							to="0"
+							begin="houseAnim.begin"
+							dur="4s"
+							repeatCount="1"
+							calcMode="linear"
+							fill="freeze"
+						/>
+					</path>
+
+					<g id="house">
+						
+						<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="2518" d="
+							M30,380 h100 a1,2 1 1,1 100,0 h100 
+							v-150 h20 l-40,-100 l-40,100 h20 v40 h-60
+							v-120 h20 l-70,-140 l-70,140 h20 v120 h-60
+							v-40 h20 l-40,-100 l-40,100 h20 v150
+							m108,-50 h12 m10,0 h15 m10,0 h15 m10,0 h15
+							m-4,-10 h-10 m-10,0 h-15 m-10,0 h-15 m-10,0 h-10
+							m10,-20 v40 l5,10 l5,-10 v-51
+							m15,-8 v58 l5,10 l5,-10 v-58
+							m15,7 v51 l5,10 l5,-10 v-39
+						">
+							<animate
+								id="houseAnim"
+								attributeName="stroke-dashoffset"
+								from="2518"
+								to="0"
+								begin="indefinite"
+								dur="4s"
+								repeatCount="1"
+								calcMode="linear"
+								fill="freeze"
+							/>
+						</path>
+
+						<use xlink:href="#smallHouseWindow" x="30px" y="230px" />
+						<use xlink:href="#smallHouseWindow" x="290px" y="230px" />
+						<use xlink:href="#bigHouseWindow" x="135px" y="150px" />
+						<use xlink:href="#bigHouseWindow" x="185px" y="150px" />
+
+					</g>
+
+				</defs>			
+				
+				<use xlink:href="#house" x="180px" y="0px" />
+
+			</g>
+
+			<g>
+				
+				<defs>
+					
+					<title>monster</title>
+
+					<ellipse id="monsterEye" cx="10" cy="20" rx="5px" ry="7px" fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="38">
+						<animate
+							attributeName="stroke-dashoffset"
+							from="38"
+							to="0"
+							begin="monsterAnim.begin"
+							dur="4s"
+							repeatCount="1"
+							calcMode="linear"
+							fill="freeze"
+						/>
+					</ellipse>
+
+					<circle id="monsterNose" cx="10px" cy="10px" r="5px" fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="31">
+						<animate
+							attributeName="stroke-dashoffset"
+							from="31"
+							to="0"
+							begin="monsterAnim.begin"
+							dur="4s"
+							repeatCount="1"
+							calcMode="linear"
+							fill="freeze"
+						/>
+					</circle>
+
+					<g id="monster">
+
+						<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="811" d="
+							M70,50 a1,1.5 1 1,1 60,0 a1,1 1 1,0 20,0 a1,1 1 1,1 40,0
+							l5,40 a1,1 1 1,1 -20,0 a1,1 1 1,0 -20,0 a1,1 1 1,1 -20,0
+							a1,5 1 1,0 0,70 h-0.5 a2,1 1 1,1 -70,0 h0.5
+							a1,5 1 1,0 0,-70 a1,1 1 1,1 -20,0 a1,1 1 1,0 -20,0 a1,1 1 1,1 -20,0 l5,-40
+							a1,1 1 1,1 40,0 a1,1 1 1,0 20,0
+						">
+							<animate
+								id="monsterAnim"
+								attributeName="stroke-dashoffset"
+								from="811"
+								to="0"
+								begin="houseAnim.begin"
+								dur="4s"
+								repeatCount="1"
+								calcMode="linear"
+								fill="freeze"
+							/>
+						</path>
+
+						<use xlink:href="#monsterEye" x="80px" y="0px" />
+						<use xlink:href="#monsterEye" x="100px" y="0px" />
+						<use xlink:href="#monsterNose" x="90px" y="25px" />
+
+					</g>
+
+				</defs>
+
+				<!-- <use xlink:href="#monster" x="0px" y="0px" /> -->
+				
+			</g>
+
+			<g>
+
+				<defs>
+
+					<title>monster2</title>
+
+					<circle id="monsterEye2" cx="10px" cy="10px" r="8px" fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="50">
+						<animate
+							attributeName="stroke-dashoffset"
+							from="50"
+							to="0"
+							begin="monsterAnim2.begin"
+							dur="4s"
+							repeatCount="1"
+							calcMode="linear"
+							fill="freeze"
+						/>
+					</circle>
+					
+					<ellipse id="monsterNose2" cx="10" cy="20" rx="7px" ry="4px" fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="35">
+						<animate
+							attributeName="stroke-dashoffset"
+							from="35"
+							to="0"
+							begin="monsterAnim2.begin"
+							dur="4s"
+							repeatCount="1"
+							calcMode="linear"
+							fill="freeze"
+						/>
+					</ellipse>
+
+					<g id="monster2">
+					
+						<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="446" d="
+							M10,160 a1,2.5 1 1,1 100,0 a1,1 1 1,1 -30,0 a1,1 1 1,1 -40,0 a1,1 1 1,1 -30,0
+						">
+							<animate
+								id="monsterAnim2"
+								attributeName="stroke-dashoffset"
+								from="446"
+								to="0"
+								begin="monsterAnim.begin"
+								dur="4s"
+								repeatCount="1"
+								calcMode="linear"
+								fill="freeze"
+							/>
+						</path>
+
+						<use xlink:href="#monsterEye2" x="40px" y="50px" />
+						<use xlink:href="#monsterEye2" x="65px" y="55px" />
+						<use xlink:href="#monsterNose2" x="50px" y="60px" />
+
+					</g>
+
+				</defs>
+				
+				<!-- <use xlink:href="#monster2" x="0px" y="0px" /> -->
+
+			</g>
+
+			<g id="monsters">
+
+				<defs>
+					<title>The arrival of monsters in homes</title>
+				</defs>
+				
+				<use xlink:href="#monster" x="800px" y="200px" />
+				<use xlink:href="#monster2" x="1000px" y="200px" />
+
+				<animateMotion 
+					xlink:href="#monsters"
+					path="
+						M0,0 h-250
+						"
+					begin="monsterAnim2.end + 1s"
+					dur="7s"
+					rorate="auto"
+					repeatCount="indefinite"
+					calcMode="linear"
+				/>
+
+			</g>
+
+		</svg>
+
+		<article class="description">
+
+			<h3>"Гаманець або життя"</h3>
+
+			<p>
+				Є дві протилежні версії, чому у свято Хеллоуїн маленькі діти, переодягнені в страшилки, ходять від будинку до будинку та просять солодощі.
+			</p><br />
+			<p>
+				1. Діти, одягаючи маски злих духів, стукають у всі будинки і кричать: "Пригощай або буде гірше!", після чого збирають цукерки (жертви), які повинні їх умилостивити. І якщо, Ви, не піднесете їм свою жертву, ці маленькі злі духи можуть страшно пожартувати над вами, наприклад, сильно замазати чорною сажею ручки дверей або вікон. ;D	
+			</p><br />
+			<p>
+				2. Зробити внесок різними смаколиками (цукерки, печиво) для дітей – вважається як добра справа, яка з добрими молитвами за померлих повинна полегшити існування всіх, хто знаходиться в темних коридорах пекла.
+			</p>
+
+		</article>
+
+	</section>
+
+	<section id="block4">
+		
+		<article class="description">
+
+			<h3>Обряди</h3>
+
+			<p>
+				В Ірландії було прийнято збиратися в головному місті країни – Тару. В ході свята влаштовувався величезний бенкет, який починався рано вранці, а закінчувався лише наступного дня. Шанувальники Самхейна гасили в будинках вогонь, а запалювали його знову тільки від священного вогню друїдів. Жерці освячували полум'я, а разом з ним і всіх кельтів, обіцяючи їм процвітання і успіх.
+			</p><br />
+			<p>
+				Згідно з повір'ям, Хеллоуїн – це час, коли в справжній світ можуть проникнути інші істоти: духи, демони, гобліни, відьми та інші містичні створіння. Для того, щоб небезпечні істоти не нападали на місцевих жителів, кельти одягалися в костюми, що відповідають цим образам, і ходили по домівках, погрожуючи мешканцям і вимагаючи від них їжі.
+			</p><br />
+			<p>
+				Після того, як землі Англії були захоплені римлянами, свято залишилося, так як його дата збігалася з римським торжеством богині Помони, яка відповідала за всі живі рослини на землі. Поступово традиції змішалися і в обряді з'явився популярний і зараз гарбуз на Хеллоуїн.
+			</p>
+
+		</article>
+
+	</section>
+
+	<section id="block5">
+		
+		<svg id="" width="inherit" height="250px" viewBox="0 0 1349 250">
+			
+			<g>
+
+				<defs>
+					
+					<title>pumpkins</title>
+
+					<circle id="pumpkinCircleEye" cx="10px" cy="10px" r="8px" fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="66">
+						<animate
+							attributeName="stroke-dashoffset"
+							from="66"
+							to="0"
+							begin="pumpkinsBodyAnim.begin"
+							dur="4s"
+							repeatCount="1"
+							calcMode="linear"
+							fill="freeze"
+						/>
+					</circle>
+
+					<g>
+						
+						<g id="pumpkinFace1">
+						
+							<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="325" d="
+								M35,65 h20 l-10,-15 l-10,15
+								m40,0 h20 l-10,-15 l-10,15
+								m-45,20 a1.2,1 1 1,0 70,0
+								l-15,2 v10 h-10 v-10 h-20 v10 h-10 v-10 l-16,-2
+							">
+								<animate
+									attributeName="stroke-dashoffset"
+									from="325"
+									to="0"
+									begin="pumpkinsBodyAnim.begin"
+									dur="4s"
+									repeatCount="1"
+									calcMode="linear"
+									fill="freeze"
+								/>
+							</path>
+
+						</g>
+
+						<g id="pumpkinFace2">
+							
+							<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="410" d="
+								M40,50 h7 v7 h7 v7 h-7 v7 h-7 v-7 h-7 v-7 h7 v-8
+								m40,0 h7 v7 h7 v7 h-7 v7 h-7 v-7 h-7 v-7 h7 v-8
+								M25,85 l20,5 l5,-5 l5,10 l10,-15 l10,15 l5,-10 l5,5 l20,-5
+								l-10,12 l-10,5 l-5,-5 l-10,15 l-5,-10 l-5,10 l-10,-15 l-5,5 l-10,-5 l-10,-12
+							">
+								<animate
+									attributeName="stroke-dashoffset"
+									from="410"
+									to="0"
+									begin="pumpkinsBodyAnim.begin"
+									dur="4s"
+									repeatCount="1"
+									calcMode="linear"
+									fill="freeze"
+								/>
+							</path>		
+
+						</g>
+
+						<g id="pumpkinFace3">
+							
+							<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="279" d="
+								M35,55 v15 h20 l-20,-15
+								m60,0 v15 h-20 l20,-15
+								m0,30 a4,1 1 1,1 -60,0 a1,1 1 1,0 60,0
+							">
+								<animate
+									attributeName="stroke-dashoffset"
+									from="279"
+									to="0"
+									begin="pumpkinsBodyAnim.begin"
+									dur="4s"
+									repeatCount="1"
+									calcMode="linear"
+									fill="freeze"
+								/>
+							</path>
+
+						</g>
+
+						<g id="pumpkinFace4">
+							
+							<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="301" d="
+								M35,65 h20 l-10,-15 l-10,15
+								m40,0 h20 l-10,-15 l-10,15
+								m-45,15 a1,1 1 1,0 70,0 a3,1 1 1,1 -70,0
+							">
+								<animate
+									attributeName="stroke-dashoffset"
+									from="301"
+									to="0"
+									begin="pumpkinsBodyAnim.begin"
+									dur="4s"
+									repeatCount="1"
+									calcMode="linear"
+									fill="freeze"
+								/>
+							</path>
+
+						</g>
+
+						<g id="pumpkinFace5">
+							
+							<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="290" d="
+								M35,55 v15 h20 l-20,-15
+								m60,0 v15 h-20 l20,-15
+								m5,40 h-70 v8 h50 l5,10 l5,-10 h10 v-9
+							">
+								<animate
+									attributeName="stroke-dashoffset"
+									from="290"
+									to="0"
+									begin="pumpkinsBodyAnim.begin"
+									dur="4s"
+									repeatCount="1"
+									calcMode="linear"
+									fill="freeze"
+								/>
+							</path>
+
+						</g>
+
+						<g id="pumpkinFace6">
+							
+							<use xlink:href="#pumpkinCircleEye" x="35px" y="50px" />
+							<use xlink:href="#pumpkinCircleEye" x="75px" y="50px" />
+
+							<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="213" d="
+								M30,85 a1.2,1 1 1,0 70,0
+								l-15,2 v10 h-10 v-10 h-20 v10 h-10 v-10 l-16,-2
+							">
+								<animate
+									attributeName="stroke-dashoffset"
+									from="213"
+									to="0"
+									begin="pumpkinsBodyAnim.begin"
+									dur="2s"
+									repeatCount="1"
+									calcMode="linear"
+									fill="freeze"
+								/>
+							</path>
+
+						</g>
+
+					</g>
+
+					<g id="pumpkinsBody">
+						
+						<ellipse cx="65" cy="80" rx="60px" ry="50px" fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="346">
+							<animate
+								id="pumpkinsBodyAnim"
+								attributeName="stroke-dashoffset"
+								from="346"
+								to="0"
+								begin="indefinite"
+								dur="3s"
+								repeatCount="1"
+								calcMode="linear"
+								fill="freeze"
+							/>
+						</ellipse>
+						
+						<path fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="66" d="
+							M50,31 a1,4 1 1,0 0,-15 a3,1 1 1,1 30,0  a1,4 1 1,0 0,15
+						">
+							<animate
+								id="pumpkinCapAnim"
+								attributeName="stroke-dashoffset"
+								from="66"
+								to="0"
+								begin="pumpkinsBodyAnim.begin"
+								dur="2s"
+								repeatCount="1"
+								calcMode="linear"
+								fill="freeze"
+							/>
+						</path>
+
+					</g>
+
+					<g>
+						
+						<g id="pumpkin1">
+							<use xlink:href="#pumpkinFace1" x="0px" y="0px" />
+							<use xlink:href="#pumpkinsBody" x="0px" y="0px" />
+
+							<animateMotion 
+								xlink:href="#pumpkin1"
+								path="
+									M0,0 v50 v-100 v50
+									"
+								begin="pumpkinsBodyAnim.end + 1s"
+								dur="5s"
+								rorate="auto"
+								repeatCount="indefinite"
+								calcMode="linear"
+							/>
+						</g>
+
+						<g id="pumpkin2">
+							<use xlink:href="#pumpkinFace2" x="0px" y="0px" />
+							<use xlink:href="#pumpkinsBody" x="0px" y="0px" />
+
+							<animateMotion 
+								xlink:href="#pumpkin2"
+								path="
+									M0,0 v-50 v100 v-50
+									"
+								begin="pumpkinsBodyAnim.end + 1s"
+								dur="5s"
+								rorate="auto"
+								repeatCount="indefinite"
+								calcMode="linear"
+							/>
+						</g>
+
+						<g id="pumpkin3">
+							<use xlink:href="#pumpkinFace3" x="0px" y="0px" />
+							<use xlink:href="#pumpkinsBody" x="0px" y="0px" />
+
+							<animateMotion 
+								xlink:href="#pumpkin3"
+								path="
+									M0,0 v50 v-100 v50
+									"
+								begin="pumpkinsBodyAnim.end + 1s"
+								dur="5s"
+								rorate="auto"
+								repeatCount="indefinite"
+								calcMode="linear"
+							/>
+						</g>
+
+						<g id="pumpkin4">
+							<use xlink:href="#pumpkinFace4" x="0px" y="0px" />
+							<use xlink:href="#pumpkinsBody" x="0px" y="0px" />
+
+							<animateMotion 
+								xlink:href="#pumpkin4"
+								path="
+									M0,0 v-50 v100 v-50
+									"
+								begin="pumpkinsBodyAnim.end + 1s"
+								dur="5s"
+								rorate="auto"
+								repeatCount="indefinite"
+								calcMode="linear"
+							/>
+						</g>
+
+						<g id="pumpkin5">
+							<use xlink:href="#pumpkinFace5" x="0px" y="0px" />
+							<use xlink:href="#pumpkinsBody" x="0px" y="0px" />
+
+							<animateMotion 
+								xlink:href="#pumpkin5"
+								path="
+									M0,0 v50 v-100 v50
+									"
+								begin="pumpkinsBodyAnim.end + 1s"
+								dur="5s"
+								rorate="auto"
+								repeatCount="indefinite"
+								calcMode="linear"
+							/>
+						</g>
+
+						<g id="pumpkin6">
+							<use xlink:href="#pumpkinFace6" x="0px" y="0px" />
+							<use xlink:href="#pumpkinsBody" x="0px" y="0px" />	
+
+							<animateMotion 
+								xlink:href="#pumpkin6"
+								path="
+									M0,0 v-50 v100 v-50
+									"
+								begin="pumpkinsBodyAnim.end + 1s"
+								dur="5s"
+								rorate="auto"
+								repeatCount="indefinite"
+								calcMode="linear"
+							/>
+						</g>
+
+					</g>
+
+					<g id="pumpkinsPos">
+						<use xlink:href="#pumpkin1" x="0px" y="0px" />
+						<use xlink:href="#pumpkin2" x="150px" y="0px" />
+						<use xlink:href="#pumpkin3" x="300px" y="0px" />
+						<use xlink:href="#pumpkin4" x="450px" y="0px" />
+						<use xlink:href="#pumpkin5" x="600px" y="0px" />
+						<use xlink:href="#pumpkin6" x="750px" y="0px" />	
+					</g>
+
+				</defs>	
+
+				<use xlink:href="#pumpkinsPos" x="225px" y="50px" />
+				
+			</g>
+
+		</svg>
+
+		<article class="description">
+
+			<h3>Гарбуз</h3>
+
+			<p>
+				Ліхтар Джека – це ще одна традиція і невід'ємний атрибут, який обов'язково повинен бути вписаний в сценарій на Хеллоуїн.
+			</p><br />
+			<p>
+				Все почалося з одного хитрого ірландського коваля. Джек двічі обдурив диявола, уклавши з ним угоду. Він залишився власником своєї душі, але, на жаль, йому це не допомогло. Коли Джек помер, за його гріховне життя ворота раю не відкрилися перед ним. Тому скупий коваль був змушений до кінця століть блукати по землі в очікуванні Судного дня. Єдине, що йому дісталося в загробному житті – це маленький вуглик, який був захищений від дощу і вітру знайомим нам овочем. Так і з'явився відомий нині ліхтар Джека, або всім відомий гарбуз на Хеллоуїн.
+			</p>
+
+		</article>
+
+	</section>
+
+	<section id="block6">
+			
+		<article class="description">
+
+			<h3>Святкування Хеллоуїна</h3>
+
+			<p>
+				Для України Хеллоуїн – нове свято. Воно давно привертало українців своєю містичністю і вже встигло стати для багатьох улюбленим святом у році.
+			</p><br />
+			<p>
+				31 жовтня в Україні проводиться величезна кількість маскарадних вечірок. У меню кафе з’являються гарбузові пироги. А багато закладів влаштовують ночі кіно з фільмами жахів або анімаційними мультфільмами в такому ж стилі.
+			</p><br />
+			<p>
+				Для українців Хеллоуїн – це прекрасний привід розважитися, сходити на маскарадну вечірку і зробити незвичайний макіяж, або вбратися в тематичний костюм та прогулюватись містом красуючись перед іншими.
+			</p><br />
+			<p>
+				В різних країнах свято Хеллоуїна святкується по своєму.
+			</p><br />
+			<p>
+				Так, чорна кішка є важливим символом Хеллоуїна в зв’язку з повір’ям про зв’язок з темними силами, а в Англії таким символом є біла кішка ...
+			</p><br />
+			<p>
+				А Франція славиться своїми фантастичними парадами. Щорічно більше 30 тисяч туристів і жителів країни вбираються в костюми на Хеллоуїн і відправляються в передмістя Парижа, в Діснейленд і в Ліможі. Тисячі гоблінів, привидів, вампірів і відьом влаштовують самі барвисті шоу.
+			</p><br />
+			<p>
+				Сьогоді, свято Хеллоуїна, набирає все більшого розмаху як у нас, так і по всьому Світу!
+			</p>
+
+		</article>
+
+	</section>
+
+	<svg id="anim" width="inherit" height="300px"  viewBox="0 0 1349 300">
+		
+		<defs>
+			
+			<title>cat</title>
+
+			<path id="cat" fill="none" stroke="#000" stroke-width="2px" stroke-dasharray="3400" d="
+				M50,200 a1,1 1 1,0 80,0
+				m-117,-32 a2,1 1 1,0 150,0 l-30,-5 l-5,-70 l-30,-5 l15,-10 l-25,-10
+				l120,-40 l40,40 l-50,50 l-30,-30 l20,-20 l10,10 l-10,10
+				l10,10 l20,-20 l-30,-30 l-40,40 l50,50 l70,-70 l-60,-60 l-150 50
+				l30,20 l-10,10 l-30,5 l-5,70 l-30,5
+				m48,36 a1,1 1 1,0 25,0 m-6.5,0 a1,1 1 1,1 -12,0
+				m27,0 a1,1 1 1,0 25,0 m-6.5,0 a1,1 1 1,1 -12,0
+				m-3,20 a2,1 1 1,1 -15,0
+				m35,7 a1,5 1 1,1 0,30
+				m3,-10 a150,150 1 0,1 20,60 a1,5 1 1,1 0,30 l-15,5 a1,5 1 1,1 -5,-80
+				m0,80 a2,1 1 1,1 -20,0 a1,5 1 1,1 0,-60 a2,1 1 1,1 -15,0 
+				a1,5 1 1,1 0,60 a2,1 1 1,1 -20,0 a1,5 1 1,0 0,-60 m3,0 a1,5 1 1,1 0,-52
+				m-2,113 l-20,-5 a1,5 1 1,1 0,-30 a150,150 1 0,1 17,-55
+				m10,93 a1,3 1 1,1 2,-10 m5,10 a1,3 1 1,1 2,-10
+				m20,9 a1,2 1 1,0 2,-10 m5,10 a1,2 1 1,0 2,-10
+				m32,-20 l100,-20 l-20,-90 l-70,20 l10,60 l40,-10 l-5,-30 l-25,5 l-2,-10
+				l35,-7 l10,50 l-60,15 l-15,-80 l90,-25 l25,110 l-114,23
+			">
+				<animate
+					id="catAnim"
+					attributeName="stroke-dashoffset"
+					from="3400"
+					to="0"
+					begin="indefinite"
+					dur="15s"
+					repeatCount="1"
+					calcMode="linear"
+					fill="freeze"
+				/>
+			</path>
+
+		</defs>
+
+		<use xlink:href="#cat" x="550px" y="0px" />
+
+	</svg>
+
+</body>
+</html>

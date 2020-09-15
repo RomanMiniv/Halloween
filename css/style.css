@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	background-color: #fff;
+	font-family: "Exo 2", sans-serif;
+}
+
+.description {
+	width: 70%;
+	margin: 0 auto;
+	text-align: justify;
+	font-size: 17px;
+}
+
+.description h3 {
+	margin-bottom: 1%;
+	font-weight: normal;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.description p {
+	text-indent: 25px;
+	line-height: 24px;
+}
+
+#title {
+	position: relative;
+	background-color: #333;
+}
+
+#heading {
+	position: absolute;
+	z-index: 4;
+	color: #f89209;
+	font-size: 48px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+#block2, #block4, #block6 {
+	background: radial-gradient(at top, #FFA840, #f78002);
+	padding: 2% 0;
+}
+
+#block3, #block5 {
+	padding: 1% 0 2%;
+}
+
+#block3 .description {
+	padding-top: 1%;
+}
+
+#block5 .description {
+	padding-top: 1%;
+}
