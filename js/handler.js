@@ -12,20 +12,22 @@ $(document).ready(function () {
 	};
 
 	$(document).on("scroll", function () {
+		const houseAnimPosition = $("#block3")[0].getBoundingClientRect().top;
+		const pumpkinsBodyAnimPosition = $("#block5")[0].getBoundingClientRect().top;
 
-		if ($(document).scrollTop() >= 930 && $(document).scrollTop() <= 1004) {
+		if (houseAnimPosition >= 50 && houseAnimPosition <= 200) {
 			if (!animStart.house) {
 				$("#houseAnim")[0].beginElement();
 				animStart.house = true;
 			}
 		} 
-		else if ($(document).scrollTop() >= 1870 && $(document).scrollTop() <= 2050) {
+		else if (pumpkinsBodyAnimPosition >= 100 && pumpkinsBodyAnimPosition <= 300) {
 			if (!animStart.pumpkins) {
 				$("#pumpkinsBodyAnim")[0].beginElement();
 				animStart.pumpkins = true;
 			}
 		} 
-		else if ($(document).scrollTop() >= 2850) {
+		else if ($(document).scrollTop() >= document.body.scrollHeight - 800) {
 			if (!animStart.cat) {
 				$("#catAnim")[0].beginElement();
 				animStart.cat = true;
